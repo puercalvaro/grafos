@@ -1,0 +1,9 @@
+/* Load config*/
+/*@import "colors.css";*/
+@import "sidebar.css";
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
