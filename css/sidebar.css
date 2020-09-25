@@ -1,24 +1,64 @@
+@import "colors.css";
+
 .sidebar {
-    background-color: #5655AA ;
-    color: white;
+    background-color: var(--sidebar-bg) ;
+    color: var(--sidebar-fg);
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
+    font-size: 18px;
     position: fixed;
-    weight: 400px;
-    height: 100%;
+    width: 350px;
+    height: 100vh;
+    text-align: center;
 }
 
 .sidebar-header {
     height: 200px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.actions li {
-    font-weight: 300;
-    list-style: none;
+.sidebar-menu {
+    overflow: hidden;
 }
 
-li {
-    padding: 5px
+.btn {
+    display: block;
+    padding: 16px 20x;
+    position: relative;
+    color: white;
+}
 
+.submenu {
+    background: var(--sidebar-submenu-bg);
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+.submenu a {
+    display: block;
+    padding: 16px 26px;
+    color: var(--sidebar-submenu-fg);
+    font-size: 14px;
+    text-align: left;
+    margin: 4px 0px;
+    position: relative;
+}
+
+.submenu a:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: var(--sidebar-bg);
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.submenu a:hover:before {
+    opacity: 1;
+}
+
+.item:target .submenu {
+    max-height: 10em;
 }

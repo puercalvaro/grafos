@@ -3,35 +3,40 @@
     <head>
         <meta charset="utf-8">
         <title>Grafos</title>
-        <link rel=”icon” type=”image/png” href=”sources/favicon.png”/>
+        <link rel=”icon” type=”image/png” href=”icons/favicon.png”/>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/master.css">
     </head>
     <body>
+        <div class="wrapper">
         <div class="sidebar">
             <div class="sidebar-header">
                 <p><img src="https://media-exp1.licdn.com/dms/image/C561BAQHW_4eJfogpCg/company-background_10000/0?e=2159024400&v=beta&t=_pjxXA6FhSzoshRtGfFHIpDW9nUeUruJpzJ6-Sm4NAg" alt="Fish graph.svg" width="300" height="150"></p>
             </div>
-            <div class="actions">
-                <div class="insertar">Insertar un grafo
-                    <ul>
-                        <li>Arista</li>
-                        <li>Vertice</li>
-                    </ul>
-                </div>
-                <div class="operacion">Operaciones
-                    <ul>
-                        <li>Mostar matriz de caminos</li>
-                        <li>Mostrar el camino mas corto para dos nodos</li>
-                        <li>Verificar si es Hamiltoniano o Euleriano</li>
-                        <li>Indicar el flujo maximo para un nodo</li>
-                        <li>Obtener el árbol generador mínimo mediante prim o kruskal</li>
-                    </ul>
-                </div>
+            <div class="sidebar-menu">
+                <li class="item" id="insert">
+                    <a href="#insert" class="btn">INSERTAR UN GRAFO</a>
+                    <div class="submenu">
+                        <a href="#">Arista</a>
+                        <a href="#">Vertice</a>
+                    </div>
+                </li>
+                <li class="item" id="operacion">
+                    <a href="#operacion" class="btn">OPERACIONES</a>
+                    <div class="submenu">
+                        <a href="#">Mostar matriz de caminos</a>
+                        <a href="#">Mostrar el camino mas corto para dos nodos</a>
+                        <a href="#">Verificar si es Hamiltoniano o Euleriano</a>
+                        <a href="#">Indicar el flujo maximo para un nodo</a>
+                        <a href="#">Obtener el árbol generador mínimo<br>mediante prim o kruskal</a>
+                    </div>
+                </li>
             </div>
         </div>
         <div class="workbench">
-
+            Workbench space here
         </div>
+        </div>
+       <!-- <script type="text/javascript" src="js/bg_grid.js"></script> -->
     </body>
 </html>
