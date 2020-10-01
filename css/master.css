@@ -1,9 +1,9 @@
 /* Load config*/
-/*@import "colors.css";*/
+@import "colors.css";
 @import "sidebar.css";
 
 body {
-    background-color: white;
+    background-color: var(--workbench-bg);
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(60, 60, 60, 0.7) .1em, transparent .1em), linear-gradient(90deg, rgba(60, 60, 60, 0.7) .1em, transparent .1em);

@@ -1,10 +1,14 @@
 /*Color scheme*/
 
 :root {
-  --workbench-bg: white;
+  --workbench-bg: #faf9f9;
 
-  --sidebar-bg: #5655AA;
-  --sidebar-fg: white;
-  --sidebar-submenu-bg: #d3c9ff;
-  --sidebar-submenu-fg: #777;
+  --sidebar-bg: #333641;
+  --sidebar-fg: #222;
+
+  --sidebar-title-fg: #FFF;
+  --sidebar-title-bg: #343742;
+
+  --sidebar-submenu-bg: #4c5c68;
+  --sidebar-submenu-fg: #dcdcdd;
 }
