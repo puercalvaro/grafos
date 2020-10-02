@@ -1,4 +1,4 @@
-<img src="img/banner.png" align=center>
+<img src="img/banner.png" align="center" height="200px">
 
 
 ## Introduction
@@ -9,14 +9,14 @@ En desarrollo..
 ..
 
 ## Preview
-<!-- Insert gif -->
+<!-- <img src="img/preview1_01-10.png" height="300px">
+<img src="img/preview2_01-10.png" height="300px">
+<br><br> -->
 
 ## Uso
 ..
 
 <!-- # To-do
 + hide sidebar button on bottom when hover like atom
-+ inspiracion de otros sidebar/ acordeon menu
-+ favicon doenst show
 + Section (insertar,operaciones) change color font when open
-+ acorden menu open one by default -->
+-->

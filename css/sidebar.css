@@ -37,31 +37,35 @@
 
 .btn {
     display: block;
-    padding: 16px 20px;
+    padding: 10px 20px;
     position: relative;
     color: var(--sidebar-title-fg);
     background-color: var(--sidebar-title-bg);
 }
 .btn img {
     padding: 5px;
+    margin-right: 10px;
 }
 
 .submenu {
     background: var(--sidebar-submenu-bg);
     overflow: hidden;
-    transition: max-height 0.3s;
+    transition: max-height 0.4s;
     max-height: 0;
     width: 250px;
 }
 .submenu a {
     display: block;
-    padding: 13px 20px;
+    padding: 10px 20px;
     color: var(--sidebar-submenu-fg);
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
-    text-align: center;
     margin: 4px 0px;
     position: relative;
+}
+.submenu img {
+    padding: 10px 15px 0px 0px;
+    opacity: 0.5;
 }
 
 .submenu a:before {
@@ -83,13 +87,6 @@
     opacity: 1;
 }
 
-.item {
-    padding-bottom: 14px;
-}
-.item img {
-    position: fixed;
-    left: 5px;
-}
 .item:target .submenu {
     max-height: 20em;
 }
