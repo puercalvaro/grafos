@@ -3,12 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Grafos</title>
+        <!-- Favicon -->
         <link rel="icon" type="image/png" href="icons/favicon.png">
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Imports -->
         <link rel="stylesheet" href="css/master.css">
+        <script defer src="js/popup.js"></script>
     </head>
     <body>
-        <div class="wrapper">
         <div class="sidebar">
             <div class="sidebar-header">
                 <img src="img/grafito.png" alt="Header image" align="right" width="90%" height="100%">
@@ -19,34 +22,92 @@
                 <li class="item" id="insert">
                     <a href="#insert" class="btn"><img src="icons/add.svg" alt="Icon of add" width="15" height="15">INSERTAR</a>
                     <div class="submenu">
-                        <button type="button" data-insertarArista name="insertar-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <!-- Insertar una arista -->
+                        <button type="button" data-insertArista name="insertar-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+
+                        <!-- Insertar un vertice -->
                         <button type="button" data-insertVertice name="insertar-vertice"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
                     </div>
                 </li>
                 <li class="item" id="remove">
                     <a href="#remove" class="btn"><img src="icons/remove.svg" alt="Icon of add" width="15" height="15">REMOVER</a>
                     <div class="submenu">
+                        <!-- Remover una arista -->
                         <button type="button" data-removeArista name="remove-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+
+                        <!-- Remover un vertice -->
                         <button type="button" data-removeVertice name="remove-vertice"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
                     </div>
                 </li>
                 <li class="item" id="operacion">
                     <a href="#operacion" class="btn"><img src="icons/operation.svg" alt="Icon of Operations" width="15" height="15">OPERACIONES</a>
                     <div class="submenu">
-                        <button type="button" data-mostarMatriz name="mostrar-matriz"><img src="icons/matrix.svg" alt="operation 1 icon" width="15" height="15">Mostar la matriz de caminos</button>
-                        <button type="button" data-mostrarCamino name="mostar-camino"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</button>
-                        <button type="button" data-verificarHE name="verificar-HE"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
-                        <button type="button" data-flujoMaximo name="flujo-maximo"><img src="icons/flujo.svg" alt="operation 4 icon" width="15" height="15">Indicar el flujo m&aacuteximo para un nodo</button>
-                        <button type="button" data-obtenerArbol name="obtener-arbol"><img src="icons/tree.svg" alt="operation 5 icon" width="15" height="15">Obtener el &aacuterbol generador m&iacutenimo mediante prim o kruskal</button>
+                        <!-- Ejercicio 1 -->
+                        <button type="button" data-mostarMatriz data-popup-target="#popup1" name="mostrar-matriz"><img src="icons/matrix.svg" alt="operation 1 icon" width="15" height="15">Mostar la matriz de caminos</button>
+                        <div class="popup" id="popup1">
+                            <div class="popup-header">
+                                <h1>Matriz de caminos</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+
+                        <!-- Ejercicio 2 -->
+                        <button type="button" data-mostrarCamino data-popup-target="#popup2" name="mostar-camino"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</button>
+                        <div class="popup" id="popup2">
+                            <div class="popup-header">
+                                <h1>Camino mas corto para dos nodos</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+
+                        <!-- Ejercicio 3 -->
+                        <button type="button" data-verificarHE data-popup-target="#popup3" name="verificar-HE"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
+                        <div class="popup" id="popup3">
+                            <div class="popup-header">
+                                <h1>Verificar si es Hamiltoniano o Euleriano</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+
+                        <!-- Ejercicio 4 -->
+                        <button type="button" data-flujoMaximo data-popup-target="#popup4" name="flujo-maximo"><img src="icons/flujo.svg" alt="operation 4 icon" width="15" height="15">Indicar el flujo m&aacuteximo para un nodo</button>
+                        <div class="popup" id="popup4">
+                            <div class="popup-header">
+                                <h1>Flujo m&aacuteximo</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+
+                        <!-- Ejercicio 5 -->
+                        <button type="button" data-obtenerArbol data-popup-target="#popup5" name="obtener-arbol"><img src="icons/tree.svg" alt="operation 5 icon" width="15" height="15">Obtener el &aacuterbol generador m&iacutenimo mediante prim o kruskal</button>
+                        <div class="popup" id="popup5">
+                            <div class="popup-header">
+                                <h1>&Aacuterbol generador m&iacutenimo</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
             </div>
         </div>
-        <div class="workbench">
+        <div id="wall" class="workbench">
             Workbench space here
         </div>
-        </div>
-       <!-- <script type="text/javascript" src="js/bg_grid.js"></script> -->
     </body>
 </html>

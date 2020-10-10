@@ -1,6 +1,8 @@
 /* Load config*/
 @import "colors.css";
 @import "sidebar.css";
+@import "popup.css";
+@import "workbench.css";
 
 body {
     background-color: var(--workbench-bg);
@@ -15,13 +17,4 @@ body {
     margin: 0px;
     list-style: none;
     text-decoration: none;
-}
-/*
-.wrapper {
-    display: flex;
-}
-*/
-
-.workbench {
-    height: 100vh;
 }

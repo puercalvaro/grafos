@@ -1,0 +1,13 @@
+#wall {
+    background-color: rgba(50, 50, 50, 0.5);
+    pointer-events: none;
+    opacity: 0;
+}
+#wall.active {
+    opacity: 1;
+    pointer-events: all
+}
+
+.workbench {
+    height: 100vh;
+}

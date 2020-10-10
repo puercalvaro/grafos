@@ -1,0 +1,38 @@
+/* Load config */
+@import "colors.css";
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    padding: 20px 30px;
+    transform: translate(-30%, -70%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-title-fg);
+    z-index: 10;
+    width: 600px;
+    max-width: 70%;
+}
+.popup.active {
+    transform: translate(-30%, -70%) scale(1);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+.popup-header button {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.popup-body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+}
