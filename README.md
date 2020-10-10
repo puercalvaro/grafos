@@ -1,7 +1,7 @@
-<img src="img/banner.png" align="center" height="200px">
+<img src="img/banner.png" align="center" height="270px">
 
 
-## Introduction
+## Introducción
 Esta es una aplicacion web diseñada para el ramo 'Lenguajes y Grafos Formales'<br>
 En desarrollo..
 

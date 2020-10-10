@@ -13,7 +13,7 @@
 }
 
 .sidebar-header {
-    height: 200px;
+    height: 150px;
     border-bottom: 5px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-header a {
@@ -54,7 +54,7 @@
     max-height: 0;
     width: 250px;
 }
-.submenu a {
+.submenu button {
     display: block;
     padding: 10px 20px;
     color: var(--sidebar-submenu-fg);
@@ -62,13 +62,17 @@
     font-size: 14px;
     margin: 4px 0px;
     position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
 }
 .submenu img {
     padding: 10px 15px 0px 0px;
     opacity: 0.5;
 }
 
-.submenu a:before {
+.submenu button:before {
     content: "";
     position: absolute;
     width: 6px;
@@ -79,11 +83,11 @@
     transition: 0.3s;
     opacity: 0;
 }
-.submenu a:hover {
+.submenu button:hover {
     color: #FFF;
 }
 
-.submenu a:hover:before {
+.submenu button:hover:before {
     opacity: 1;
 }
 

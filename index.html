@@ -11,27 +11,36 @@
         <div class="wrapper">
         <div class="sidebar">
             <div class="sidebar-header">
-                <img src="img/grafito.png" alt="Header image" width="100%" height="180">
+                <img src="img/grafito.png" alt="Header image" align="right" width="90%" height="100%">
                 <a href="https://github.com/yowls/grafos"><img src="icons/github.png" alt="github" width="20" height="20">Github</a>
             </div>
             <div class="sidebar-menu">
+            <ul>
                 <li class="item" id="insert">
                     <a href="#insert" class="btn"><img src="icons/add.svg" alt="Icon of add" width="15" height="15">INSERTAR</a>
                     <div class="submenu">
-                        <a href="#"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</a>
-                        <a href="#"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un Vertice</a>
+                        <button type="button" data-insertarArista name="insertar-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <button type="button" data-insertVertice name="insertar-vertice"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
+                    </div>
+                </li>
+                <li class="item" id="remove">
+                    <a href="#remove" class="btn"><img src="icons/remove.svg" alt="Icon of add" width="15" height="15">REMOVER</a>
+                    <div class="submenu">
+                        <button type="button" data-removeArista name="remove-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <button type="button" data-removeVertice name="remove-vertice"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
                     </div>
                 </li>
                 <li class="item" id="operacion">
                     <a href="#operacion" class="btn"><img src="icons/operation.svg" alt="Icon of Operations" width="15" height="15">OPERACIONES</a>
                     <div class="submenu">
-                        <a href="#"><img src="icons/matrix.svg" alt="operation 1 icon" width="15" height="15">Mostar matriz de caminos</a>
-                        <a href="#"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</a>
-                        <a href="#"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano<br> o Euleriano</a>
-                        <a href="#"><img src="icons/flujo.svg" alt="operation 4 icon" width="15" height="15">Indicar el flujo maximo para un nodo</a>
-                        <a href="#"><img src="icons/tree.svg" alt="operation 5 icon" width="15" height="15">Obtener el árbol generador mínimo mediante prim o kruskal</a>
+                        <button type="button" data-mostarMatriz name="mostrar-matriz"><img src="icons/matrix.svg" alt="operation 1 icon" width="15" height="15">Mostar la matriz de caminos</button>
+                        <button type="button" data-mostrarCamino name="mostar-camino"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</button>
+                        <button type="button" data-verificarHE name="verificar-HE"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
+                        <button type="button" data-flujoMaximo name="flujo-maximo"><img src="icons/flujo.svg" alt="operation 4 icon" width="15" height="15">Indicar el flujo m&aacuteximo para un nodo</button>
+                        <button type="button" data-obtenerArbol name="obtener-arbol"><img src="icons/tree.svg" alt="operation 5 icon" width="15" height="15">Obtener el &aacuterbol generador m&iacutenimo mediante prim o kruskal</button>
                     </div>
                 </li>
+            </ul>
             </div>
         </div>
         <div class="workbench">
