@@ -1,4 +1,4 @@
-<img src="img/banner.png" align="center" height="270px">
+<img src="img/banner.png" align="center" height="300px">
 
 
 ## Introducción
@@ -9,14 +9,8 @@ En desarrollo..
 ..
 
 ## Preview
-<!-- <img src="img/preview1_01-10.png" height="300px">
-<img src="img/preview2_01-10.png" height="300px">
-<br><br> -->
+<img src="img/preview.png" height="650px">
+<br><br>
 
 ## Uso
 ..
-
-<!-- # To-do
-+ hide sidebar button on bottom when hover like atom
-+ Section (insertar,operaciones) change color font when open
--->

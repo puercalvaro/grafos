@@ -14,7 +14,7 @@
     <body>
         <div class="sidebar">
             <div class="sidebar-header">
-                <img src="img/grafito.png" alt="Header image" align="right" width="90%" height="100%">
+                <img src="img/grafos.png" alt="Header image" height="100%">
                 <a href="https://github.com/yowls/grafos"><img src="icons/github.png" alt="github" width="20" height="20">Github</a>
             </div>
             <div class="sidebar-menu">
@@ -23,27 +23,27 @@
                     <a href="#insert" class="btn"><img src="icons/add.svg" alt="Icon of add" width="15" height="15">INSERTAR</a>
                     <div class="submenu">
                         <!-- Insertar una arista -->
-                        <button type="button" data-insertArista name="insertar-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <button type="button" data-insertArista><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
 
                         <!-- Insertar un vertice -->
-                        <button type="button" data-insertVertice name="insertar-vertice"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
+                        <button type="button" data-insertVertice><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
                     </div>
                 </li>
                 <li class="item" id="remove">
                     <a href="#remove" class="btn"><img src="icons/remove.svg" alt="Icon of add" width="15" height="15">REMOVER</a>
                     <div class="submenu">
                         <!-- Remover una arista -->
-                        <button type="button" data-removeArista name="remove-arista"><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <button type="button" data-removeArista><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
 
                         <!-- Remover un vertice -->
-                        <button type="button" data-removeVertice name="remove-vertice"><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
+                        <button type="button" data-removeVertice><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
                     </div>
                 </li>
                 <li class="item" id="operacion">
                     <a href="#operacion" class="btn"><img src="icons/operation.svg" alt="Icon of Operations" width="15" height="15">OPERACIONES</a>
                     <div class="submenu">
                         <!-- Ejercicio 1 -->
-                        <button type="button" data-mostarMatriz data-popup-target="#popup1" name="mostrar-matriz"><img src="icons/matrix.svg" alt="operation 1 icon" width="15" height="15">Mostar la matriz de caminos</button>
+                        <button type="button" data-mostarMatriz data-popup-target="#popup1"><img src="icons/matrix.svg" alt="operation 1 icon" width="15" height="15">Mostar la matriz de caminos</button>
                         <div class="popup" id="popup1">
                             <div class="popup-header">
                                 <h1>Matriz de caminos</h1>
@@ -55,7 +55,7 @@
                         </div>
 
                         <!-- Ejercicio 2 -->
-                        <button type="button" data-mostrarCamino data-popup-target="#popup2" name="mostar-camino"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</button>
+                        <button type="button" data-mostrarCamino data-popup-target="#popup2"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</button>
                         <div class="popup" id="popup2">
                             <div class="popup-header">
                                 <h1>Camino mas corto para dos nodos</h1>
@@ -67,7 +67,7 @@
                         </div>
 
                         <!-- Ejercicio 3 -->
-                        <button type="button" data-verificarHE data-popup-target="#popup3" name="verificar-HE"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
+                        <button type="button" data-verificarHE data-popup-target="#popup3"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
                         <div class="popup" id="popup3">
                             <div class="popup-header">
                                 <h1>Verificar si es Hamiltoniano o Euleriano</h1>
@@ -79,7 +79,7 @@
                         </div>
 
                         <!-- Ejercicio 4 -->
-                        <button type="button" data-flujoMaximo data-popup-target="#popup4" name="flujo-maximo"><img src="icons/flujo.svg" alt="operation 4 icon" width="15" height="15">Indicar el flujo m&aacuteximo para un nodo</button>
+                        <button type="button" data-flujoMaximo data-popup-target="#popup4"><img src="icons/flujo.svg" alt="operation 4 icon" width="15" height="15">Indicar el flujo m&aacuteximo para un nodo</button>
                         <div class="popup" id="popup4">
                             <div class="popup-header">
                                 <h1>Flujo m&aacuteximo</h1>
@@ -91,7 +91,7 @@
                         </div>
 
                         <!-- Ejercicio 5 -->
-                        <button type="button" data-obtenerArbol data-popup-target="#popup5" name="obtener-arbol"><img src="icons/tree.svg" alt="operation 5 icon" width="15" height="15">Obtener el &aacuterbol generador m&iacutenimo mediante prim o kruskal</button>
+                        <button type="button" data-obtenerArbol data-popup-target="#popup5"><img src="icons/tree.svg" alt="operation 5 icon" width="15" height="15">Obtener el &aacuterbol generador m&iacutenimo mediante prim o kruskal</button>
                         <div class="popup" id="popup5">
                             <div class="popup-header">
                                 <h1>&Aacuterbol generador m&iacutenimo</h1>
@@ -107,7 +107,6 @@
             </div>
         </div>
         <div id="wall" class="workbench">
-            Workbench space here
         </div>
     </body>
 </html>
