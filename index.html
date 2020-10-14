@@ -10,6 +10,7 @@
         <!-- Imports -->
         <link rel="stylesheet" href="css/master.css">
         <script defer src="js/popup.js"></script>
+        <script defer src="js/insertarEliminar.js"></script>
     </head>
     <body>
         <div class="sidebar">
@@ -22,21 +23,85 @@
                 <li class="item" id="insert">
                     <a href="#insert" class="btn"><img src="icons/add.svg" alt="Icon of add" width="15" height="15">INSERTAR</a>
                     <div class="submenu">
-                        <!-- Insertar una arista -->
-                        <button type="button" data-insertArista><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <!-- Insertar una VERTICE -->
+                        <button type="button" data-popup-target="#popup11"><img src="icons/circle.svg" alt="Vertice icon" width="15" height="15">Un v&eacutertice</button>
+                        <div class="popup" id="popup11">
+                            <div class="popup-header">
+                                <h1>Insertar un v&eacutertice</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                <form>
+                                    <label for="insertarVertice">Nombre del v&eacutertice:</label><br>
+                                    <input type="text" id="insertarVertice" name="vertice" required><br>
+                                    <button type="button" onclick="setVertice()">Enter</button>
+                                </form>
+                            </div>
+                        </div>
 
-                        <!-- Insertar un vertice -->
-                        <button type="button" data-insertVertice><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
+                        <!-- Insertar un ARISTA -->
+                        <button type="button" data-popup-target="#popup12"><img src="icons/line.svg" alt="Arista icon" width="15" height="15">Una arista</button>
+                        <div class="popup" id="popup12">
+                            <div class="popup-header">
+                                <h1>Insertar una arista</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                <form>
+                                    <label for="insertarInicioArista">Inicio de la arista:</label><br>
+                                    <input type="text" id="insertarInicioArista" name="arista" required><br>
+                                    <label for="insertarTerminoArista">Termino de la arista:</label><br>
+                                    <input type="text" id="insertarTerminoArista" name="arista" required><br>
+                                    <label for="insertarPesoArista">Peso de la arista:</label><br>
+                                    <input type="number" id="insertarPesoArista" name="arista" min="1"><br>
+                                    <label for="dirigido">¿Dirigido?</label><br>
+                                    <!-- Valor por defecto 1 -->
+                                    <input type="checkbox" id="dirigido" checked="checked" name="arista">
+                                    <button type="button" onclick="setArista()">Enter</button>
+                                    <input type="submit" onclick="setArista()" value="enter">
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li class="item" id="remove">
                     <a href="#remove" class="btn"><img src="icons/remove.svg" alt="Icon of add" width="15" height="15">REMOVER</a>
                     <div class="submenu">
-                        <!-- Remover una arista -->
-                        <button type="button" data-removeArista><img src="icons/circle.svg" alt="Arista icon" width="15" height="15">Una Arista</button>
+                        <!-- Remover una VERTICE -->
+                        <button type="button" data-popup-target="#popup21"><img src="icons/circle.svg" alt="Vertice icon" width="15" height="15">Un v&eacutertice</button>
+                        <div class="popup" id="popup21">
+                            <div class="popup-header">
+                                <h1>Remover un v&eacutertice</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                <form>
+                                    <label for="removerVertice">Nombre del v&eacutertice:</label><br>
+                                    <input type="text" id="removerVertice" name="vertice" required><br>
+                                    <button type="button" onclick="removeVertice()">Enter</button>
+                                    <input type="submit" value="enter">
+                                </form>
+                            </div>
+                        </div>
 
-                        <!-- Remover un vertice -->
-                        <button type="button" data-removeVertice><img src="icons/line.svg" alt="Vertice icon" width="15" height="15">Un V&eacutertice</button>
+                        <!-- Remover un ARISTA -->
+                        <button type="button" data-popup-target="#popup22"><img src="icons/line.svg" alt="Arista icon" width="15" height="15">Una arista</button>
+                        <div class="popup" id="popup22">
+                            <div class="popup-header">
+                                <h1>Remover una arista</h1>
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="popup-body">
+                                <form>
+                                    <label for="removerInicioArista">Inicio de la arista:</label><br>
+                                    <input type="text" id="removerInicioArista" name="arista" required><br>
+                                    <label for="removerTerminoArista">Termino de la arista:</label><br>
+                                    <input type="text" id="removerTerminoArista" name="arista" required><br>
+                                    <button type="button" onclick="removeArista()">Enter</button>
+                                    <input type="submit" value="enter">
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li class="item" id="operacion">
@@ -50,7 +115,7 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <!-- Tabla -->
                             </div>
                         </div>
 
@@ -58,11 +123,11 @@
                         <button type="button" data-mostrarCamino data-popup-target="#popup2"><img src="icons/camino.svg" alt="operation 2 icon" width="15" height="15">Mostrar el camino mas corto para dos nodos</button>
                         <div class="popup" id="popup2">
                             <div class="popup-header">
-                                <h1>Camino mas corto para dos nodos</h1>
+                                <h1>Camino mas corto<br>para dos nodos</h1>
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <!-- Tabla -->
                             </div>
                         </div>
 
@@ -70,7 +135,7 @@
                         <button type="button" data-verificarHE data-popup-target="#popup3"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
                         <div class="popup" id="popup3">
                             <div class="popup-header">
-                                <h1>Verificar si es Hamiltoniano o Euleriano</h1>
+                                <h1>Verificar si es<br>Hamiltoniano o Euleriano</h1>
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
