@@ -94,3 +94,12 @@
 .item:target .submenu {
     max-height: 20em;
 }
+
+#tablaEjercicio1 {
+    text-align: center;
+    padding: 20px 0px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    
+}

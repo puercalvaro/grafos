@@ -1,14 +1,19 @@
 /*Color scheme*/
-
 :root {
-  --workbench-bg: #faf9f9;
+  --workbench-bg:	#faf9f9;
 
-  --sidebar-bg: #333641;
-  --sidebar-fg: #222;
+  --sidebar-bg:		#333641;
+  --sidebar-fg:		#222;
 
-  --sidebar-title-bg: #343742;
-  --sidebar-title-fg: #FFF;
+  --sidebar-title-bg:	#343742;
+  --sidebar-title-fg:	#FFF;
 
-  --sidebar-submenu-bg: #4c5c68;
-  --sidebar-submenu-fg: #dcdcdd;
+  --sidebar-submenu-bg:	#4c5c68;
+  --sidebar-submenu-fg:	#dcdcdd;
+
+  --red:		#e77f67;
+  --yellow:		#f7d794;
+  --orange:   #f3a683;
+  --blue:		#778beb;
+  --green: #9aecdb;
 }

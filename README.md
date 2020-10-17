@@ -9,7 +9,7 @@ En desarrollo..
 ..
 
 ## Preview
-<img src="img/preview.png" height="500px">
+<img src="img/preview.png" height="400px">
 <br><br>
 
 ## Uso

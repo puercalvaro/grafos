@@ -10,7 +10,7 @@
         <!-- Imports -->
         <link rel="stylesheet" href="css/master.css">
         <script defer src="js/popup.js"></script>
-        <script defer src="js/insertarEliminar.js"></script>
+        <script defer src="js/operaciones.js"></script>
     </head>
     <body>
         <div class="sidebar">
@@ -31,11 +31,15 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                <form>
-                                    <label for="insertarVertice">Nombre del v&eacutertice:</label><br>
-                                    <input type="text" id="insertarVertice" name="vertice" required><br>
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Nombre -->
+                                        <label for="insertarVertice">Nombre del v&eacutertice:</label><br>
+                                        <input type="text" id="insertarVertice" name="vertice" autocomplete="off" required>
+                                    </div>
+                                    <!-- Submit -->
                                     <button type="button" onclick="setVertice()">Enter</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -47,19 +51,32 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                <form>
-                                    <label for="insertarInicioArista">Inicio de la arista:</label><br>
-                                    <input type="text" id="insertarInicioArista" name="arista" required><br>
-                                    <label for="insertarTerminoArista">Termino de la arista:</label><br>
-                                    <input type="text" id="insertarTerminoArista" name="arista" required><br>
-                                    <label for="insertarPesoArista">Peso de la arista:</label><br>
-                                    <input type="number" id="insertarPesoArista" name="arista" min="1"><br>
-                                    <label for="dirigido">¿Dirigido?</label><br>
-                                    <!-- Valor por defecto 1 -->
-                                    <input type="checkbox" id="dirigido" checked="checked" name="arista">
-                                    <button type="button" onclick="setArista()">Enter</button>
-                                    <input type="submit" onclick="setArista()" value="enter">
-                                </form>
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Nodo inicial -->
+                                        <label for="insertarInicioArista">Inicio de la arista:</label><br>
+                                        <input type="text" id="insertarInicioArista" name="arista" placeholder="Nombre del primer nodo" autocomplete="off" required>
+                                    </div>
+                                    <div class="formulario-item">
+                                        <!-- Nodo final -->
+                                        <label for="insertarTerminoArista">T&eacutermino de la arista:</label><br>
+                                        <input type="text" id="insertarTerminoArista" name="arista" placeholder="Nombre del segundo nodo" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Peso del camino , valor por defecto 1 -->
+                                        <label for="insertarPesoArista">Peso de la arista:</label><br>
+                                        <input type="number" id="insertarPesoArista" name="arista" value="1" min="1">
+                                    </div>
+                                    <div class="formulario-item">
+                                        <!-- Dirigido boolean,valor por defecto unchecked[false] -->
+                                        <label for="dirigido">¿Dirigido?</label><br>
+                                        <input type="checkbox" id="dirigido" name="arista">
+                                    </div>
+                                </div>
+                                <!-- Submit -->
+                                <button type="button" onclick="setArista()">Enter</button>
                             </div>
                         </div>
                     </div>
@@ -75,12 +92,15 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                <form>
-                                    <label for="removerVertice">Nombre del v&eacutertice:</label><br>
-                                    <input type="text" id="removerVertice" name="vertice" required><br>
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Nombre -->
+                                        <label for="removerVertice">Nombre del v&eacutertice:</label><br>
+                                        <input type="text" id="removerVertice" name="vertice" autocomplete="off" required>
+                                    </div>
+                                    <!-- Submit -->
                                     <button type="button" onclick="removeVertice()">Enter</button>
-                                    <input type="submit" value="enter">
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -92,14 +112,32 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                <form>
-                                    <label for="removerInicioArista">Inicio de la arista:</label><br>
-                                    <input type="text" id="removerInicioArista" name="arista" required><br>
-                                    <label for="removerTerminoArista">Termino de la arista:</label><br>
-                                    <input type="text" id="removerTerminoArista" name="arista" required><br>
-                                    <button type="button" onclick="removeArista()">Enter</button>
-                                    <input type="submit" value="enter">
-                                </form>
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Nodo inicial -->
+                                        <label for="removerInicioArista">Inicio de la arista:</label><br>
+                                        <input type="text" id="removerInicioArista" name="arista" placeholder="Nombre del primer nodo" autocomplete="off" required>
+                                    </div>
+                                    <div class="formulario-item">
+                                        <!-- Nodo final -->
+                                        <label for="removerTerminoArista">T&eacutermino de la arista:</label><br>
+                                        <input type="text" id="removerTerminoArista" name="arista" placeholder="Nombre del segundo nodo" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Peso del camino , valor por defecto 1 -->
+                                        <label for="removerPesoArista">Peso de la arista:</label><br>
+                                        <input type="number" id="removerPesoArista" name="arista" value="1" min="1">
+                                    </div>
+                                    <div class="formulario-item">
+                                        <!-- Dirigido boolean,valor por defecto unchecked[false] -->
+                                        <label for="removerDirigido">¿Dirigido?</label><br>
+                                        <input type="checkbox" id="removerDirigido" name="arista">
+                                    </div>
+                                </div>
+                                <!-- Submit -->
+                                <button type="button" onclick="removeArista()">Enter</button>
                             </div>
                         </div>
                     </div>
@@ -115,7 +153,18 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Numero -->
+                                        <label for="matrizCamino">Insertar numero</label><br>
+                                        <input type="text" id="matrizCamino" name="ejercicio" autocomplete="off" required>
+                                    </div>
+                                    <!-- Submit -->
+                                    <button type="button" onclick="mostarMatrizCaminos()">Enter</button>
+                                </div>
                                 <!-- Tabla -->
+                                <div id="isConexo"></div>
+                                <div id="tablaEjercicio1"></div>
                             </div>
                         </div>
 
@@ -127,6 +176,20 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Nodo inicial -->
+                                        <label for="caminoInicial">Nodo inicial:</label><br>
+                                        <input type="text" id="caminoInicial" name="arista" placeholder="Nombre del primer nodo" autocomplete="off" required>
+                                    </div>
+                                    <div class="formulario-item">
+                                        <!-- Nodo final -->
+                                        <label for="caminoFinal">Nodo final:</label><br>
+                                        <input type="text" id="caminoFinal" name="arista" placeholder="Nombre del segundo nodo" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <!-- Submit -->
+                                <button type="button" onclick="caminoEntreNodos()">Enter</button>
                                 <!-- Tabla -->
                             </div>
                         </div>
@@ -172,6 +235,25 @@
             </div>
         </div>
         <div id="wall" class="workbench">
+            <div class="aristasTabla">
+                <h2>Aristas</h2>
+                <table>
+                    <tr>
+                        <th>Inicio</th>
+                        <th>T&eacutermino</th>
+                        <th>Dirigido</th>
+                        <th>Peso</th>
+                    </tr>
+                    <tbody id="aristasTabla"></tbody>
+                </table>
+            </div>
+            <div class="verticesTabla">
+                <h2>V&eacutertices</h2>
+                <table>
+                    <tr><th>Nombre</th></tr>
+                    <tbody id="verticesTabla"></tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>

@@ -1,13 +1,49 @@
+@import "colors.css";
+
 #wall {
-    background-color: rgba(50, 50, 50, 0.5);
     pointer-events: none;
-    opacity: 0;
 }
 #wall.active {
-    opacity: 1;
+    background-color: rgba(50, 50, 50, 0.5);
     pointer-events: all
 }
 
 .workbench {
+    display: flex;
+    justify-content: flex-end;
     height: 100vh;
+    color: #343434;
+    padding: 20px;
+}
+
+.verticesTabla {
+    height: 100%;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.aristasTabla {
+    height: 100%;
+    margin-right: 20px;
+    text-align: center;
+}
+.aristasTabla th {
+    padding: 0px 15px 0px
+}
+
+.verticesTabla h2, .verticesTabla table , 
+.aristasTabla h2, .aristasTabla table {
+    background-color: var(--sidebar-bg);
+    min-width: 160px;
+}
+.verticesTabla h2, .aristasTabla h2{
+    border-radius: 10px 10px 0px 0px;
+    color: var(--sidebar-title-fg);
+    font-family: 'Oswald', sans-serif;
+}
+.verticesTabla table, .aristasTabla table {
+    border-radius: 0px 0px 10px 10px;
+    color: var(--sidebar-submenu-fg);
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 15px;
 }
