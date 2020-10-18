@@ -13,7 +13,7 @@
         <script defer src="js/operaciones.js"></script>
     </head>
     <body>
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <img src="img/grafos.png" alt="Header image" height="100%">
                 <a href="https://github.com/yowls/grafos"><img src="icons/github.png" alt="github" width="20" height="20">Github</a>
@@ -72,7 +72,7 @@
                                     <div class="formulario-item">
                                         <!-- Dirigido boolean,valor por defecto unchecked[false] -->
                                         <label for="dirigido">¿Dirigido?</label><br>
-                                        <input type="checkbox" id="dirigido" name="arista">
+                                        <input type="checkbox" id="insertarDirigido" name="arista">
                                     </div>
                                 </div>
                                 <!-- Submit -->
@@ -163,8 +163,10 @@
                                     <button type="button" onclick="mostarMatrizCaminos()">Enter</button>
                                 </div>
                                 <!-- Tabla -->
-                                <div id="isConexo"></div>
-                                <div id="tablaEjercicio1"></div>
+                                <div class="tablaEjercicio">
+                                    <div id="isConexo"></div>
+                                    <div id="tablaMatrizCamino"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -189,8 +191,12 @@
                                     </div>
                                 </div>
                                 <!-- Submit -->
-                                <button type="button" onclick="caminoEntreNodos()">Enter</button>
+                                <button type="button" onclick="recorridoMinimo()">Enter</button>
                                 <!-- Tabla -->
+                                <div class="tablaEjercicio">
+                                    <div id="caminoRecorrido"></div>
+                                    <div id="tamañoRecorrido"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -198,11 +204,22 @@
                         <button type="button" data-verificarHE data-popup-target="#popup3"><img src="icons/euler.svg" alt="operation 3 icon" width="15" height="15">Verificar si es Hamiltoniano o Euleriano</button>
                         <div class="popup" id="popup3">
                             <div class="popup-header">
-                                <h1>Verificar si es<br>Hamiltoniano o Euleriano</h1>
+                                <h1>Verificar si es<br>Hamiltoniano y/o Euleriano</h1>
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <div class="HamiltonEuler">
+                                    <div class="Hamiltoniano">
+                                        <h2>Hamiltoniano</h2>
+                                        <button type="submit" onclick="hamilton()">enter</button>
+                                        <div id="resultadoHamilton"></div>
+                                    </div>
+                                    <div class="Euleriano">
+                                        <h2>Euleriano</h2>
+                                        <button type="submit" onclick="euler()">enter</button>
+                                        <div id="resultadoEuler"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -214,7 +231,22 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <div class="formulario">
+                                    <div class="formulario-item">
+                                        <!-- Nodo inicial -->
+                                        <label for="caminoInicial">Nodo inicial:</label><br>
+                                        <input type="text" id="caminoInicial" name="arista" placeholder="Nombre del primer nodo" autocomplete="off" required>
+                                    </div>
+                                    <div class="formulario-item">
+                                        <!-- Nodo final -->
+                                        <label for="caminoFinal">Nodo final:</label><br>
+                                        <input type="text" id="caminoFinal" name="arista" placeholder="Nombre del segundo nodo" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="tablaEjercicio">
+                                    <button type="submit" onclick="flujoMaximo()">Calcular flujo</button>
+                                    <div id="flujo"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -226,7 +258,10 @@
                                 <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="popup-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <div class="tablaEjercicio">
+                                    <button type="submit" onclick="arbolsprim()">Generar &aacuterbol</button>
+                                    <div id="arbol"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -236,21 +271,21 @@
         </div>
         <div id="wall" class="workbench">
             <div class="aristasTabla">
-                <h2>Aristas</h2>
                 <table>
+                    <caption>Aristas</caption>
                     <tr>
-                        <th>Inicio</th>
-                        <th>T&eacutermino</th>
-                        <th>Dirigido</th>
-                        <th>Peso</th>
+                        <th scope="col">Inicio</th>
+                        <th scope="col">T&eacutermino</th>
+                        <th scope="col">Dirigido</th>
+                        <th scope="col">Peso</th>
                     </tr>
                     <tbody id="aristasTabla"></tbody>
                 </table>
             </div>
             <div class="verticesTabla">
-                <h2>V&eacutertices</h2>
                 <table>
-                    <tr><th>Nombre</th></tr>
+                    <caption>Vertices</caption>
+                    <tr><th scope="col">Nombre</th></tr>
                     <tbody id="verticesTabla"></tbody>
                 </table>
             </div>

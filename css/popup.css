@@ -17,6 +17,7 @@
 }
 .popup.active {
     transform: translate(-30%, -70%) scale(1);
+    pointer-events: all;
 }
 
 .popup-header {
@@ -71,4 +72,27 @@
     background: var(--sidebar-bg);
     border: none;
     border-bottom: 3px solid var(--sidebar-submenu-bg);
+}
+
+.tablaEjercicio {
+    padding: 10px 0px 20px;
+    font-size: 1.3em;
+    font-family: 'Oswald', sans-serif;
+}
+#tablaMatrizCamino {
+    text-align: center;
+    font-weight: bold;
+}
+#tamañoRecorrido{
+    padding-top: 7px;
+}
+
+.HamiltonEuler {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 30px;
+}
+.Hamiltoniano {
+    width: 50%;
+    border-right: 2px solid  rgba(100, 100, 100, 0.55);
 }

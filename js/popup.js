@@ -1,6 +1,7 @@
 const openPopupButton = document.querySelectorAll('[data-popup-target]')
 const closePopupButton = document.querySelectorAll('[data-close-button]')
 const wall = document.getElementById('wall')
+const sidebar = document.getElementById('sidebar')
 
 openPopupButton.forEach(button => {
     button.addEventListener('click', () => {
@@ -28,10 +29,12 @@ function openPopup(popup) {
     if (popup == null) return
     popup.classList.add('active')
     wall.classList.add('active')
+    sidebar.classList.add('active')
 }
 
 function closePopup(popup) {
     if (popup == null) return
     popup.classList.remove('active')
     wall.classList.remove('active')
+    sidebar.classList.remove('active')
 }

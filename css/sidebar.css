@@ -1,5 +1,9 @@
 @import "colors.css";
 
+#sidebar.active {
+    pointer-events: none;
+}
+
 .sidebar {
     background-color: var(--sidebar-bg) ;
     color: var(--sidebar-fg);
@@ -8,7 +12,7 @@
     font-size: 18px;
     position: fixed;
     width: 300px;
-    height: 100vh;
+    height: 100%;
     text-align: left;
 }
 
@@ -56,7 +60,7 @@
 }
 .submenu button {
     display: block;
-    padding: 10px 20px;
+    padding: 7px 20px;
     color: var(--sidebar-submenu-fg);
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
@@ -93,13 +97,4 @@
 
 .item:target .submenu {
     max-height: 20em;
-}
-
-#tablaEjercicio1 {
-    text-align: center;
-    padding: 20px 0px 20px;
-    font-size: 1.3em;
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
-    
 }

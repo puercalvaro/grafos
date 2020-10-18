@@ -5,12 +5,7 @@
 Esta es una aplicacion web diseñada para el ramo 'Lenguajes y Grafos Formales'<br>
 En desarrollo..
 
-## Instalacion
-..
 
 ## Preview
 <img src="img/preview.png" height="400px">
 <br><br>
-
-## Uso
-..

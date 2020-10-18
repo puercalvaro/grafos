@@ -31,12 +31,13 @@
     padding: 0px 15px 0px
 }
 
-.verticesTabla h2, .verticesTabla table , 
-.aristasTabla h2, .aristasTabla table {
+.verticesTabla caption, .verticesTabla table , 
+.aristasTabla caption, .aristasTabla table {
     background-color: var(--sidebar-bg);
     min-width: 160px;
 }
-.verticesTabla h2, .aristasTabla h2{
+.verticesTabla caption, .aristasTabla caption{
+    font-size: 1.5em;
     border-radius: 10px 10px 0px 0px;
     color: var(--sidebar-title-fg);
     font-family: 'Oswald', sans-serif;
