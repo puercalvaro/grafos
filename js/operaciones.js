@@ -34,6 +34,7 @@ var setVertice = function (){
         mostarVertices.innerHTML = tablaVertices;
     }
 }
+ 
 
 var setArista = function (){
     var inicio = document.getElementById('insertarInicioArista').value;
