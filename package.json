@@ -2,7 +2,7 @@
   "name": "grafos",
   "version": "1.0.0",
   "description": "",
-  "main": "nodemon main.js",
+  "main": "main.js",
   "dependencies": {
     "express": "^4.17.1",
     "path": "^0.12.7"
