@@ -2,7 +2,7 @@
   "name": "grafos",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "./src/main.js",
   "dependencies": {
     "express": "^4.17.1",
     "path": "^0.12.7"
@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "start": "node ./src/main.js"
   },
   "author": "",
   "license": "ISC"
