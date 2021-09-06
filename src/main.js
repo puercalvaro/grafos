@@ -9,7 +9,6 @@ const customerRouter = require('../src/index')
 
 app.use('/', customerRouter)
 
-
 app.listen(port, () =>
   console.log(`Server running at http://localhost:${port}`)
 );
